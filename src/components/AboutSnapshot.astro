@@ -1,0 +1,22 @@
+---
+// Snapshot data (could be moved to a .json or props in future)
+const snapshot = [
+  { label: "Location", value: "Bengaluru, India" },
+  { label: "Role", value: "Senior Architect at 4site architects" },
+  { label: "Education", value: "Hindustan School of Architecture" },
+  { label: "Focus", value: "Residential, Commercial, and Community Projects" },
+  { label: "Values", value: "Clarity, Collaboration, Craftsmanship" },
+];
+---
+
+<section class="mt-6">
+  <h2 class="text-2xl font-semibold dark:text-zinc-100 mb-6">Snapshot</h2>
+  <div class="grid md:grid-cols-2 gap-y-4 gap-x-8">
+    {snapshot.map(item => (
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-500">{item.label}</span>
+        <span class="text-base font-medium dark:text-zinc-100">{item.value}</span>
+      </div>
+    ))}
+  </div>
+</section>

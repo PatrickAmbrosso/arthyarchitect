@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { projects } from './projects';
+
+---
+
+<BaseLayout
+	title="Portfolio"
+	description="A glimpse into my journey — one line, one space, one story at a time."
+>
+  <div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">Portfolio</h1>
+      <p class="text-zinc-700 dark:text-zinc-300 text-lg">A glimpse into my journey — one line, one space, one story at a time.</p>
+    </div>
+    <ProjectList projects={projects}/>
+  </div>
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Abby from '@src/assets/img/abby.png';
+import Prose from '../components/Prose.astro';
+import AboutSnapshot from '../components/AboutSnapshot.astro';
+---
+
+<BaseLayout title='About Me' description='Lorem ipsum dolor sit amet'>
+	<div class='container'>
+		<main class='prose text-lg dark:prose-invert'>
+			<article>
+				<div class='w-full md:flex md:items-center gap-16 mb-10'>
+					<div class='text-pretty leading-9'>
+						<h1 class='text-4xl font-bold mb-4'>All about Arthy</h1>
+						<Prose>
+							<div class='text-lg'>
+								<p>
+									<strong>Architecture grounded in people, place, practicality, and purpose.</strong>
+								</p>
+								<p>
+									Arthy Abigail is an architect with a heart for thoughtful, meaningful spaces. Her approach to design is rooted in empathy
+									— understanding the people who will live, move, and flourish within the spaces she creates.
+								</p>
+								<p>
+									With experience across residential, commercial, and community projects, her work brings together contextual sensitivity,
+									practical function, and a calm visual language. She believes that architecture isn't just about solving spatial problems —
+									it's about making people feel held, seen, and at home.
+								</p>
+							</div>
+						</Prose>
+					</div>
+					<Image src={Abby} alt='Arthy (Abigail) Muthu' width={300} class='rounded-3xl rotate-3 mx-4 md:mx-0' />
+				</div>
+				<div>
+					<p>
+						Every project she takes on is shaped by clarity, collaboration, and craftsmanship. Whether sketching in the early design stage
+						or coordinating during execution, she's attentive to detail, driven by purpose, and committed to timeless quality.
+					</p>
+
+					<p>
+						When she's not working, she's often learning — quietly observing materials, moods, and how light falls across a surface. For
+						her, architecture is as much about listening as it is about building.
+					</p>
+				</div>
+				<AboutSnapshot />
+			</article>
+		</main>
+	</div>
+</BaseLayout>
